@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\0_work\\Study\\PosadskovLesson1\\PosadskovLesson1.csproj": {}
+    "E:\\0_work\\Study\\StudyAtGeekBrains\\PosadskovLesson1\\PosadskovLesson1.csproj": {}
   },
   "projects": {
-    "E:\\0_work\\Study\\PosadskovLesson1\\PosadskovLesson1.csproj": {
+    "E:\\0_work\\Study\\StudyAtGeekBrains\\PosadskovLesson1\\PosadskovLesson1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\0_work\\Study\\PosadskovLesson1\\PosadskovLesson1.csproj",
+        "projectUniqueName": "E:\\0_work\\Study\\StudyAtGeekBrains\\PosadskovLesson1\\PosadskovLesson1.csproj",
         "projectName": "PosadskovLesson1",
-        "projectPath": "E:\\0_work\\Study\\PosadskovLesson1\\PosadskovLesson1.csproj",
+        "projectPath": "E:\\0_work\\Study\\StudyAtGeekBrains\\PosadskovLesson1\\PosadskovLesson1.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "E:\\0_work\\Study\\PosadskovLesson1\\obj\\",
+        "outputPath": "E:\\0_work\\Study\\StudyAtGeekBrains\\PosadskovLesson1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
