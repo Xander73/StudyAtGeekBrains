@@ -1,0 +1,16 @@
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.exe
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.deps.json
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.runtimeconfig.json
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.runtimeconfig.dev.json
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.dll
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\ref\PosadskovLesson2.dll
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\bin\Debug\net5.0\PosadskovLesson2.pdb
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.csprojAssemblyReference.cache
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.GeneratedMSBuildEditorConfig.editorconfig
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.AssemblyInfoInputs.cache
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.AssemblyInfo.cs
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.csproj.CoreCompileInputs.cache
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.dll
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\ref\PosadskovLesson2.dll
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.pdb
+E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson2\obj\Debug\net5.0\PosadskovLesson2.genruntimeconfig.cache
