@@ -10,7 +10,9 @@ namespace PosadskovLesson3
 
             //Phonebook();
 
-            InvertedWord();
+            //InvertedWord();
+
+            SeeBatle();
 
             Console.ReadKey();
         }
@@ -78,6 +80,33 @@ namespace PosadskovLesson3
             {
                 Console.Write(s[i]);
             }
+        }
+
+        public static void SeeBatle ()
+        {
+            char[,] seeMap = new char[10, 10]
+            {
+                { 'O','X','O','X','O','O','O','O','O','O'},
+                { 'O','X','O','O','O','X','O','O','O','O'},
+                { 'O','X','O','O','O','X','O','O','O','O'},
+                { 'O','X','O','X','O','O','O','O','X','O'},
+                { 'O','O','O','O','O','O','O','O','O','O'},
+                { 'O','O','O','X','X','X','O','O','O','X'},
+                { 'O','X','O','O','O','O','O','O','O','O'},
+                { 'O','O','O','O','O','O','X','X','X','O'},
+                { 'O','X','X','O','O','O','O','O','O','O'},
+                { 'O','O','O','O','O','O','X','X','O','O'}
+            };
+
+            for (int i = 0; i < seeMap.Length/10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write(seeMap[i, j] + " ");
+                }
+                Console.WriteLine(); 
+            }
+            Console.WriteLine(); ;
         }
 
 
