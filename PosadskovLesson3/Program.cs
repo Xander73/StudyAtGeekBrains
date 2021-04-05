@@ -8,7 +8,9 @@ namespace PosadskovLesson3
         {
             //PrintMassivDiagonal();
 
-            Phonebook();
+            //Phonebook();
+
+            InvertedWord();
 
             Console.ReadKey();
         }
@@ -63,6 +65,18 @@ namespace PosadskovLesson3
                     if (j != 1) Console.Write(" - ");
                 }                
                 Console.WriteLine('\n'); ;
+            }
+        }
+
+        public static void InvertedWord ()
+        {
+            Console.WriteLine("Введите слово\n");
+            string s = Console.ReadLine();
+            Console.WriteLine();
+
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                Console.Write(s[i]);
             }
         }
 
