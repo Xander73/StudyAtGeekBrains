@@ -6,7 +6,9 @@ namespace PosadskovLesson3
     {
         static void Main(string[] args)
         {
-            PrintMassivDiagonal();
+            //PrintMassivDiagonal();
+
+            Phonebook();
 
             Console.ReadKey();
         }
@@ -44,6 +46,26 @@ namespace PosadskovLesson3
                 Console.WriteLine();
             }
         }
+
+        public static void Phonebook ()
+        {
+            string[,] phonebook = new string[5, 2] { {"Дима", "111-11-11/email@mail.ru" }, 
+                                                    { "Андрей", "222-22-22/email@mail.ru" }, 
+                                                    { "Игорь", "333-33-33/email@mail.ru" },
+                                                    { "Юля", "444-44-44/email@mail.ru" },
+                                                    { "Барсик", "555-55-55/email@mail.ru" }, };
+
+            for (int i = 0; i < phonebook.Length/2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {                    
+                    Console.Write(phonebook[i, j]);
+                    if (j != 1) Console.Write(" - ");
+                }                
+                Console.WriteLine('\n'); ;
+            }
+        }
+
 
         public static void  RotateMassiv<T> (T[] massiv, int rotate)
         {            
