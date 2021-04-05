@@ -6,15 +6,43 @@ namespace PosadskovLesson3
     {
         static void Main(string[] args)
         {
-            int[] mas = new int[] { 1, 2, 3, 4, 5 };
-            RotateMassiv<int>(mas, -112);
-
-            foreach (var item in mas)
-            {
-                Console.Write(item);
-            }
+            PrintMassivDiagonal();
 
             Console.ReadKey();
+        }
+
+        public static void PrintMassivDiagonal()
+        {
+            int[][] mas = new int[][] { 
+                                        new int[]{ 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 }, new int[]{ 1, 2, 3, 4, 5 }, 
+                                        new int[]{ 1, 2, 3, 4, 5 }, new int[]{ 1, 2, 3, 4, 5 } };
+
+            Console.WriteLine("Исходный массив\n");
+
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = 0; j < mas[i].Length; j++)
+                {
+                    Console.Write(mas[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\nВывод элементов по диагонали\n");
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = 0; j < mas[i].Length; j++)
+                {
+                    if (i == j)
+                    {
+                        Console.Write(mas[i][j] + " ");
+                    }
+                    else
+                    {
+                        Console.Write(0 + " ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
         public static void  RotateMassiv<T> (T[] massiv, int rotate)
