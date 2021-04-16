@@ -19,6 +19,10 @@ namespace PosadskovLesson5
 
             //PersonFunction();
 
+            //DirectoryTreeMain();
+
+            DirectoryTreeLoop(@"E:\0_work\Study\StudyAtGeekBrains\PosadskovLesson5\bin");
+
 
             Console.ReadKey();
         }
@@ -91,11 +95,10 @@ namespace PosadskovLesson5
         static void DirectoryTreeMain()
         {
             Console.WriteLine("Введите даректорию");
-            DirectoryTree(Console.ReadLine());
+            DirectoryTreeRecursion(Console.ReadLine());
         }
-        static void DirectoryTree (string p)
+        static void DirectoryTreeRecursion (string p)
         {
-            //string p = Console.ReadLine();
             DirectoryInfo path = new DirectoryInfo (@p);
             if (!path.Exists)
             {
@@ -105,13 +108,13 @@ namespace PosadskovLesson5
             FileSystemInfo[] subPath = default;
             if ((subPath =  path.GetDirectories()).Length == 0)
             {
-                PrintCatalog(path, subPath);
+                PrintCatalog(path);
             }
             else
             {
                 foreach (var item in subPath)
                 {
-                    DirectoryTree(item.ToString());
+                    DirectoryTreeRecursion(item.ToString());
 
                     subPath = path.GetFiles();
 
@@ -120,12 +123,61 @@ namespace PosadskovLesson5
                         return;
                     }
 
-                    PrintCatalog(path, subPath);
+                    PrintCatalog(path);
                 }
             } 
         }
-        static void PrintCatalog(DirectoryInfo path, FileSystemInfo[] subPath)
+        static void DirectoryTreeLoop(string p)
         {
+            DirectoryInfo path = new DirectoryInfo(@p);
+            if (!path.Exists)
+            {
+                Console.WriteLine("Задано неверное имя каталога.");
+                return;
+            }
+            FileSystemInfo[] subPath = default;
+            if ((subPath = path.GetDirectories()).Length == 0)
+            {
+                PrintCatalog(path);
+            }
+            else
+            {
+                Stack<FileSystemInfo> catalogTree = new Stack<FileSystemInfo>(subPath);
+                DirectoryInfo prevCatalog = default;
+                while (catalogTree.Count != 0)
+                {
+                    if (catalogTree.Peek() is DirectoryInfo d)
+                    {
+                        DirectoryInfo[] tempDi = d.GetDirectories();
+                        if (tempDi.Length != 0)
+                        {
+                            prevCatalog = d;
+                            foreach (var v in tempDi)
+                            {
+                                catalogTree.Push(v);
+                            }
+                        }
+                        else
+                        {
+                            catalogTree.Pop();
+                            PrintCatalog(d);
+                        }
+                    }
+                    //subPath = path.GetFiles();
+
+                    //if (subPath.Length == 0)
+                    //{
+                    //    return;
+                    //}
+
+                    //PrintCatalog(path);
+                }
+            }
+        }
+
+        static void PrintCatalog(DirectoryInfo path)
+        {
+            var subPath = path.GetFiles();
             Console.WriteLine('\\' + path.Name);
             for (int i = 0; i < subPath.Length; i++)
             {
