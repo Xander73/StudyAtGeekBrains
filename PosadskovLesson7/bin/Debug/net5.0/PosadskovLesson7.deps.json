@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PosadskovLesson7/1.0.0": {
+        "runtime": {
+          "PosadskovLesson7.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PosadskovLesson7/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
