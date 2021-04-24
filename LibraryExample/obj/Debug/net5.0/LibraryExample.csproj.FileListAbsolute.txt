@@ -1,0 +1,11 @@
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\bin\Debug\net5.0\LibraryExample.deps.json
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\bin\Debug\net5.0\LibraryExample.dll
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\bin\Debug\net5.0\ref\LibraryExample.dll
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\bin\Debug\net5.0\LibraryExample.pdb
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.GeneratedMSBuildEditorConfig.editorconfig
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.AssemblyInfoInputs.cache
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.AssemblyInfo.cs
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.csproj.CoreCompileInputs.cache
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.dll
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\ref\LibraryExample.dll
+E:\0_work\Study\StudyAtGeekBrains\LibraryExample\obj\Debug\net5.0\LibraryExample.pdb
