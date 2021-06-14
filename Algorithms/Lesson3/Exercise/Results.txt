@@ -1,0 +1,8 @@
+﻿
+
+|                                  Method |      Mean |     Error |    StdDev |    Median |
+|---------------------------------------- |----------:|----------:|----------:|----------:|
+|                  PointDistanceClassTest | 7.1370 ns | 0.0412 ns | 0.0385 ns | 7.1483 ns |
+|            PointDistanceStructFloatTest | 0.0459 ns | 0.0025 ns | 0.0023 ns | 0.0455 ns |
+|           PointDistanceStructDoubleTest | 0.0738 ns | 0.0037 ns | 0.0034 ns | 0.0734 ns |
+| PointDistanceStructFloatWithoutSqrtTest | 0.0009 ns | 0.0013 ns | 0.0012 ns | 0.0000 ns |
