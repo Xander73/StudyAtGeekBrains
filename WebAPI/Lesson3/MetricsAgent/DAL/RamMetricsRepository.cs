@@ -111,7 +111,7 @@ namespace MetricsAgent.DAL
         }
 
 
-        public AllRamMetricsResponse GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
+        public IList<RamMetric> GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
             using var connection = new SQLiteConnection(ConnectionString);
             connection.Open();
@@ -120,10 +120,10 @@ namespace MetricsAgent.DAL
 
             using (SQLiteDataReader reader = cmd.ExecuteReader())
             {
-                AllRamMetricsResponse response = new AllRamMetricsResponse();
+                IList<RamMetric> response = new List<RamMetric>();
                 while (reader.Read())
                 {
-                    response.Metrics.Add(new RamMetricDto
+                    response.Add(new RamMetric
                     {
                         Id = reader.GetInt32(0),
                         Time = TimeSpan.FromSeconds(reader.GetInt32(1))
@@ -131,6 +131,11 @@ namespace MetricsAgent.DAL
                 }
                 return response;
             }
+        }
+
+        IList<RamMetric> IRepository<RamMetric>.GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -111,7 +111,7 @@ namespace MetricsAgent.DAL
         }
 
 
-        public AllHddMetricsResponse GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
+        public IList<HddMetric> GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
             using var connection = new SQLiteConnection(ConnectionString);
             connection.Open();
@@ -120,10 +120,10 @@ namespace MetricsAgent.DAL
 
             using (SQLiteDataReader reader = cmd.ExecuteReader())
             {
-                AllHddMetricsResponse response = new AllHddMetricsResponse();
+                IList<HddMetric> response = new List<HddMetric>();
                 while (reader.Read())
                 {
-                    response.Metrics.Add(new HddMetricDto
+                    response.Add(new HddMetric
                     {
                         Id = reader.GetInt32(0),
                         Time = TimeSpan.FromSeconds(reader.GetInt32(1))

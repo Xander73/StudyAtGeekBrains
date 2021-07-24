@@ -111,7 +111,7 @@ namespace MetricsAgent.DAL
         }
 
 
-        public AllNetworkMetricsResponse GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
+        public IList<NetworkMetric> GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
             using var connection = new SQLiteConnection(ConnectionString);
             connection.Open();
@@ -120,10 +120,10 @@ namespace MetricsAgent.DAL
 
             using (SQLiteDataReader reader = cmd.ExecuteReader())
             {
-                AllNetworkMetricsResponse response = new AllNetworkMetricsResponse();
+                IList<NetworkMetric> response = new List<NetworkMetric>();
                 while (reader.Read())
                 {
-                    response.Metrics.Add(new NetworkMetricDto
+                    response.Add(new NetworkMetric
                     {
                         Id = reader.GetInt32(0),
                         Time = TimeSpan.FromSeconds(reader.GetInt32(1))
@@ -131,6 +131,11 @@ namespace MetricsAgent.DAL
                 }
                 return response;
             }
+        }
+
+        IList<NetworkMetric> IRepository<NetworkMetric>.GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
+        {
+            throw new NotImplementedException();
         }
     }
 }

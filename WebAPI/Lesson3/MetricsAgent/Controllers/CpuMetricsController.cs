@@ -68,40 +68,48 @@ namespace MetricsAgent.Controllers
                 Metrics = new List<CpuMetricDto>()
             };
 
-            foreach (var metric in metrics)
+            if (metrics != null)
             {
-                response.Metrics.Add(new CpuMetricDto
+                foreach (var metric in metrics)
                 {
-                    Time = metric.Time,
-                    Value = metric.Value,
-                    Id = metric.Id
-                });
+                    response.Metrics.Add(new CpuMetricDto
+                    {
+                        Time = metric.Time,
+                        Value = metric.Value,
+                        Id = metric.Id
+                    });
+                }
             }
+            
             return Ok();
         }
 
 
         [HttpGet("period")]
-        public IActionResult GetPeriod()
+        public IActionResult GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
-            var metrics = _repository.GetAll();
+            var metrics = _repository.GetByTimePeriod(fromTime, toTime);
 
             var response = new AllCpuMetricsResponse()
             {
                 Metrics = new List<CpuMetricDto>()
             };
 
-            foreach (var metric in metrics)
+            if (metrics != null)
             {
-                response.Metrics.Add(new CpuMetricDto
+                foreach (var metric in metrics)
                 {
-                    Time = metric.Time,
-                    Value = metric.Value,
-                    Id = metric.Id
-                });
+                    response.Metrics.Add(new CpuMetricDto
+                    {
+                        Time = metric.Time,
+                        Value = metric.Value,
+                        Id = metric.Id
+                    });
+                }
             }
             return Ok();
         }
+
 
         [HttpGet("sql-read-write-test")]
         public IActionResult TryToInsertAndRead()

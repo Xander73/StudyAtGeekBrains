@@ -114,7 +114,7 @@ namespace MetricsAgent.DAL
         }
 
 
-        public AllCpuMetricsResponse GetByTimePeriod (TimeSpan fromTime, TimeSpan toTime)
+        public IList<CpuMetric> GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
             using var connection = new SQLiteConnection(ConnectionString);
             connection.Open();
@@ -123,10 +123,10 @@ namespace MetricsAgent.DAL
 
             using (SQLiteDataReader reader = cmd.ExecuteReader())
             {
-                AllCpuMetricsResponse response = new AllCpuMetricsResponse();
+                IList<CpuMetric> response = new List<CpuMetric>();
                 while (reader.Read())
                 {
-                    response.Metrics.Add(new CpuMetricDto
+                    response.Add(new CpuMetric
                     {
                         Id = reader.GetInt32(0),
                         Value = reader.GetInt32(1),
@@ -135,7 +135,6 @@ namespace MetricsAgent.DAL
                 }
                 return response;
             }
-
         }
     }
 }

@@ -10,6 +10,9 @@ namespace MetricsAgent.DAL.Interfaces
         IList<T> GetAll();
 
 
+        IList<T> GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime);
+
+
         T GetById(int id);
 
 

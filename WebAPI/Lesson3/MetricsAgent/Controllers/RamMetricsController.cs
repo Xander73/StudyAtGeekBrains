@@ -59,35 +59,41 @@ namespace MetricsAgent.Controllers
                 Metrics = new List<RamMetricDto>()
             };
 
-            foreach (var metric in metrics)
+            if (metrics != null)
             {
-                response.Metrics.Add(new RamMetricDto
+                foreach (var metric in metrics)
                 {
-                    Time = metric.Time,
-                    Id = metric.Id
-                });
+                    response.Metrics.Add(new RamMetricDto
+                    {
+                        Time = metric.Time,
+                        Id = metric.Id
+                    });
+                }
             }
             return Ok();
         }
 
 
         [HttpGet("period")]
-        public IActionResult GetPeriod()
+        public IActionResult GetByTimePeriod(TimeSpan fromTime, TimeSpan toTime)
         {
-            var metrics = _repository.GetAll();
+            var metrics = _repository.GetByTimePeriod(fromTime, toTime);
 
             var response = new AllRamMetricsResponse()
             {
                 Metrics = new List<RamMetricDto>()
             };
 
-            foreach (var metric in metrics)
+            if (metrics != null)
             {
-                response.Metrics.Add(new RamMetricDto
+                foreach (var metric in metrics)
                 {
-                    Time = metric.Time,
-                    Id = metric.Id
-                });
+                    response.Metrics.Add(new RamMetricDto
+                    {
+                        Time = metric.Time,
+                        Id = metric.Id
+                    });
+                }
             }
             return Ok();
         }
